@@ -5,7 +5,7 @@ function matchs(win, lose){
     return totalPoints
 }
 
-let rankedWin = matchs(50, 15)
+let rankedWin = matchs(150, 45)
 
 function rankedPlace(rankedWin){
     switch(true){
