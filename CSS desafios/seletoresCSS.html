@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Aula sobre seletores em CSS</title>
+        <style>
+            /*SELETORES: definem em quais elementos nós vamos aplicar o CSS
+        1. Seletor de Tag/Tipo
+        2. Seletor por ID
+        3. Seletor por Classes
+        4. Seletor Universal
+        5. Seletor de atributos
+        */
+
+            /*exemplo de seletor Universal modifica todo o HTML*/
+            * {
+                font-weight: bold;
+            }
+
+            /*exemplo de seletor por tag*/
+            h1 {
+                color: red;
+            }
+
+            /*exemplo de seletor com ID usa #- só pode haver um na página*/
+            #seletorid {
+                color: blue;
+            }
+
+            /*exemplo de seletor de CLASSE usa . (ponto)
+            posso separar classe por espaço criando outro nome*/
+            .textclass {
+                color: green;
+            }
+            .texto-maiusculo {
+                text-transform: uppercase;
+            }
+
+            /*exemplo de seletor por ATRIBUTO [nome do atributo]*/
+            [title] {
+                color: red;
+            }
+            /*exemplo de seletor por VALOR DE ATRIBUTO [nome do atributo = valor]*/
+            [title="spotify"] {
+                color: green;
+            }
+            /*exemplo de seletor por VALOR DE ATRIBUTO com mais de uma palavra [nome do atributo ~ = valor]*/
+            [title~="stream"] {
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Seletores CSS</h1>
+        <h2 id="seletorid">Bem vindo</h2>
+        <p>No CSS nós possuímos os seguintes seletores</p>
+        <div>
+            <ul>
+                <li class="textclass texto-maiusculo">
+                    <b>Seletor por Tipo:</b> Busca elementos por uma tag HTML
+                    especifica
+                </li>
+                <li class="textclass">
+                    <b>Seletor por ID (#):</b> Busca elementos através do
+                    atributo "id"
+                </li>
+                <li class="textclass">
+                    <b>Seletor por Classe (.):</b> Busca elementos através do
+                    atributo "class"
+                </li>
+                <li class="textclass">
+                    <b>Seletor Universal (*):</b> Seleciona todos os elementos
+                    HTML
+                </li>
+                <li class="textclass">
+                    <b>Seletor de Atributos ([atrib]):</b> Seleciona elementos
+                    que possuem um atributo especifico em nosso documento HTML e
+                    conseguimos também buscar atributos com um valor especifico.
+                </li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li>
+                    <a title="netflix" href="http://www.netflix.com/">
+                        Netflix
+                    </a>
+                </li>
+                <li>
+                    <a
+                        title="stream primevideo"
+                        href="http://www.primevideo.com/"
+                    >
+                        Primevideo
+                    </a>
+                </li>
+                <li>
+                    <a title="spotify" href="http://www.spotify.com/">
+                        Spotify
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </body>
+</html>
