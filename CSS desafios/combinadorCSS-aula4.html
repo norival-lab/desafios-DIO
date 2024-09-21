@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Combinador Irmão</title>
+        <style>
+            /*Combinadores: qual tipo de relacionamento entre 2 seletores
+        1. Combinador descendente (espaço)
+        2. Combinador filho (>)
+        3. Combinador irmão adjacente (+)
+        4. Combinador irmão em geral (~)
+
+        [SELETOR] [COMBINADOR] [SELETOR]
+        */
+            /*exemplo de combinador irmão adjacente (logo após) veja o exemplo
+            temos a div com todo seu conteúdo e então logo após fechar, vem o filho*/
+            div + p {
+                color: blue;
+            }
+
+            /*exemplo de combinador irmão adjacente (logo após) utilizando classe
+            o seletor logo após a classe recebeu a alteração*/
+            .para1 + p {
+                color: green;
+            }
+
+            /*exemplo de combinador irmão geral utilizando (~) todos os irmãos logo após
+            o seletor que colocamos*/
+            .fundo-azul ~ p {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="fundo-verde">
+            <p class="para1">Paragrafo 1 dentro da div</p>
+            <p>Paragrafo 2 dentro da div</p>
+            <span>
+                <p>Paragrafo 3 dentro da div dentro do span</p>
+            </span>
+        </div>
+
+        <p>Paragrafo 4, fora da div</p>
+        <p>Paragrafo 5, fora da div</p>
+
+        <div class="fundo-verde">
+            <p class="para1">Paragrafo 6 dentro da div</p>
+            <p>Paragrafo 7 dentro da div</p>
+            <span>
+                <p>Paragrafo 8 dentro da div dentro do span</p>
+            </span>
+        </div>
+
+        <p>Paragrafo 9, fora da div</p>
+        <p>Paragrafo 10, fora da div</p>
+
+        <div class="fundo-azul">
+            <p>Paragrafo 11 dentro da div</p>
+            <p>Paragrafo 12 dentro da div</p>
+            <span>
+                <p>Paragrafo 13 dentro da div dentro do span</p>
+            </span>
+        </div>
+
+        <p>Paragrafo 14, fora da div</p>
+        <p>Paragrafo 15, fora da div</p>
+    </body>
+</html>

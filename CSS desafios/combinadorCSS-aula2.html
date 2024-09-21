@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Combinador Descendente</title>
+        <style>
+            /*Combinadores: qual tipo de relacionamento entre 2 seletores
+        1. Combinador descendente (espaço)
+        2. Combinador filho (>)
+        3. Combinador irmão adjacente (+)
+        4. Combinador irmão em geral (~)
+
+        [SELETOR] [COMBINADOR] [SELETOR]
+        */
+
+            /* exemplo de uso de combinador descendente utilizando espaço */
+            li li {
+                color: red;
+            }
+
+            /* posso utilizar também com id e procurar tags */
+            #items-02 li {
+                color: blue;
+            }
+
+            /* posso usar também classe e vários seletores ao mesmo tempo */
+            .fundo #items-03 li {
+                color: blueviolet;
+            }
+        </style>
+    </head>
+    <body>
+        <ul>
+            <li class="fundo-verde" id="lista-01">
+                <div>Item 1</div>
+                <ul id="items-01">
+                    <li>Subitem A</li>
+                    <li>Subitem B</li>
+                </ul>
+            </li>
+            <li class="fundo-verde" id="lista-02">
+                <div>Item 2</div>
+                <ul id="items-02">
+                    <li>Subitem A</li>
+                    <li>Subitem B</li>
+                </ul>
+            </li>
+            <li class="fundo" id="lista-03">
+                <div>Item 3</div>
+                <ul id="items-03">
+                    <li>Subitem A</li>
+                    <li>Subitem B</li>
+                </ul>
+            </li>
+        </ul>
+    </body>
+</html>

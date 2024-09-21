@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Combinadores CSS</title>
+        <style>
+            /*Exemplo de agrupamento de seletores utilizando virgula*/
+            /*prettier-ignore*/
+            h1, div, #link-referencia{
+                color: red;
+            }
+
+            /*Exemplo de agrupamento de seletores utilizando tag e atributos*/
+            /*prettier-ignore*/
+            #link-suporte, [id^="botao"]{
+                color: blue;
+            }
+
+            /*exemplo de agrupamento tendo tag e classe ambos juntos*/
+            p.texto {
+                color: green;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Agrupamento de seletores</h1>
+        <p class="texto">
+            Podemos aplicar as mesmas regras CSS para vários seletores diferentes. Para isso,
+            podemos separar os seletores utilizando uma virgula.
+        </p>
+        <div>
+            Assim, não precisamos ficar copiando e colando os mesmos códigos para todos, nós podemos
+            fazer um só bloco de CSS e reutilizar as mesmas regras!
+        </div>
+        <br /><br />
+        <a href="#" id="link-referencia">Clique para ver a documentação</a><br /><br />
+        <a href="#" id="link-suporte">Clique para entrar em contato com suporte</a>
+        <br /><br />
+        <a href="#" id="botao-voltar">Voltar</a><br /><br />
+        <button id="botao-fechar">Fechar a página</button>
+    </body>
+</html>
