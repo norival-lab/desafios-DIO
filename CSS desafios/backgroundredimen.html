@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fundo de Elementos</title>
+        <style>
+            .container {
+                width: 300px;
+                height: 300px;
+                background-image: url(image/image2.jpg);
+            }
+
+            /*Exemplo de background size auto*/
+            #auto {
+                background-size: auto;
+            }
+
+            /*Exemplo de background size cover*/
+            #cover {
+                background-size: cover;
+            }
+
+            /*Exemplo de background size contain*/
+            #contain {
+                background-size: contain;
+            }
+
+            /*Exemplo de background size valor*/
+            #valor {
+                background-size: 50px;
+            }
+
+            /*Exemplo de background size largura e altura*/
+            #valores {
+                background-size: 200px 300px;
+            }
+        </style>
+    </head>
+    <body>
+        <p>background-size: auto;</p>
+        <div class="container" id="auto"></div>
+        <p>background-size: cover;</p>
+        <div class="container" id="cover"></div>
+        <p>background-size: contain;</p>
+        <div class="container" id="contain"></div>
+        <p>background-size: valor;</p>
+        <div class="container" id="valor"></div>
+        <p>background-size: valor1 valor2;</p>
+        <div class="container" id="valores"></div>
+    </body>
+</html>
