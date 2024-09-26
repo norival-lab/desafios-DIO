@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fundo de Elementos</title>
+        <style>
+            /* Estiliza o container principal */
+            .container {
+                width: 300px; /* Define a largura do container para 300px */
+                height: 300px; /* Define a altura do container para 300px */
+                border: 15px dashed palegreen; /* Adiciona uma borda tracejada de 15px na cor verde clara */
+                color: white; /* Define a cor do texto como branco */
+                padding: 30px; /* Adiciona um espaçamento interno de 30px ao redor do conteúdo */
+                font-size: 80px; /* Define o tamanho da fonte para 80px */
+                font-weight: 900; /* Define a espessura da fonte como 900 (negrito) */
+                text-align: center; /* Centraliza o texto horizontalmente dentro do container */
+                background-color: palevioletred; /* Define a cor de fundo como vermelho violeta claro */
+                background-color: #eee; /* Sobrescreve a cor de fundo anterior com #eee (cinza claro) */
+                
+                /* Cria um padrão de listras diagonais no fundo com gradientes */
+                background-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black),
+                                linear-gradient(45deg, black 25%, transparent 25%, transparent 75%, black 75%, black);
+                /* Define o tamanho dos padrões de fundo */
+                background-size: 60px 60px;
+                /* Define a posição inicial dos gradientes */
+                background-position: 0 0, 30px 30px;
+            }
+
+            /* Define o comportamento do plano de fundo para cortar no limite do padding */
+            #padding-box {
+                background-clip: padding-box; /* O fundo será exibido até a borda de padding */
+            }
+
+            /* Define o comportamento do plano de fundo para cortar no limite da borda */
+            #border-box {
+                background-clip: border-box; /* O fundo será exibido até a borda externa */
+            }
+
+            /* Define o comportamento do plano de fundo para cortar no limite do conteúdo */
+            #content-box {
+                background-clip: content-box; /* O fundo será exibido apenas dentro da área de conteúdo */
+            }
+
+            /* Estiliza o texto com um fundo em clip */
+            #text {
+                -webkit-background-clip: text; /* Para compatibilidade com navegadores baseados em WebKit */
+                color: transparent; /* Torna o texto transparente para mostrar o plano de fundo */
+                background-clip: text; /* O fundo será cortado e aplicado apenas no texto */
+            }
+        </style>
+    </head>
+    <body>
+        <p>background-clip: padding-box</p>
+        <div class="container" id="padding-box"></div>
+            
+        </div>
+
+        <p>background-clip: border-box</p>
+        <div class="container" id="border-box"></div>
+            
+        </div>
+
+        <p>background-clip: content-box</p>
+        <div class="container" id="content-box"></div>
+            
+        </div>
+
+        <p>background-clip: text</p>
+        <div class="container" id="text"><p>TEXT AREA</p></div>
+            
+        </div>
+        
+    </body>
+</html>

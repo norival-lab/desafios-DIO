@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Exemplo de Bordas</title>
+        <style>
+            .box1 {
+                width: 200px;
+                height: 200px;
+                border-width: 5px; /* Define uma borda de 5px */
+                border-style: solid; /* Estilo sólido */
+                border-color: red; /* Cor da borda: vermelha */
+                margin-bottom: 20px;
+            }
+
+            .box2 {
+                width: 200px;
+                height: 200px;
+                border-width: 10px 5px 15px 20px; /* Define larguras diferentes para cada lado: topo, direita, baixo, esquerda */
+                border-style: dotted; /* Estilo pontilhado */
+                border-color: blue green yellow purple; /* Define cores diferentes para cada lado */
+                margin-bottom: 20px;
+            }
+
+            .box3 {
+                width: 200px;
+                height: 200px;
+                border: 3px dashed #00ff00; /* Combina todas as propriedades (largura, estilo, cor) de uma vez */
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Exemplo de Bordas com CSS</h1>
+
+        <div class="box1"></div>
+        <p>Borda sólida, espessura de 5px, cor vermelha.</p>
+
+        <div class="box2"></div>
+        <p>Borda pontilhada com larguras e cores diferentes para cada lado.</p>
+
+        <div class="box3"></div>
+        <p>Borda tracejada de 3px com cor verde.</p>
+    </body>
+</html>

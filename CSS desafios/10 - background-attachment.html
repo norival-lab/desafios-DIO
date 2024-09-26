@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fundo de Elementos</title>
+        <style>
+            /*Exemplo de background position - muda a posição da imagem de fundo*/
+            .container {
+                width: 300px;
+                height: 300px;
+                background-image: url(image/image1.jpg); /* Aplica uma imagem de fundo ao elemento */
+                background-size: cover; /* Ajusta o tamanho da imagem de fundo para cobrir todo o container */
+                border: 1px solid black; /* Adiciona uma borda preta ao redor do container */
+                overflow: auto; /* Permite rolagem dentro do container, se o conteúdo for maior que o tamanho do container */
+            }
+
+            /* Explicação sobre os diferentes valores de background-attachment */
+
+            /* 
+            background-attachment: fixed;
+            - Este valor fixa a imagem de fundo em relação à janela de visualização (viewport).
+            - Isso significa que a imagem de fundo permanecerá estática, mesmo que o conteúdo dentro do container seja rolado.
+            - Esse comportamento pode criar um efeito interessante de paralaxe, onde o conteúdo rola, mas a imagem de fundo permanece fixa.
+            */
+            #fixed {
+                background-attachment: fixed;
+            }
+
+            /* 
+            background-attachment: scroll;
+            - Este é o valor padrão.
+            - A imagem de fundo rola junto com o conteúdo do elemento. Ou seja, à medida que você rola o texto dentro do container,
+                a imagem de fundo também se move.
+            - Esse comportamento faz com que a imagem pareça "presa" ao conteúdo e não à janela.
+            */
+            #scroll {
+                background-attachment: scroll;
+            }
+
+            /* 
+            background-attachment: local;
+            - A imagem de fundo rola apenas dentro do elemento, acompanhando o conteúdo conforme ele é rolado.
+            - Esse valor se comporta de forma similar ao scroll, mas é aplicado diretamente ao elemento que tem rolagem. 
+            - Se você rolar o conteúdo, a imagem de fundo se moverá de acordo com o conteúdo dentro do elemento.
+            */
+            #local {
+                background-attachment: local;
+            }
+        </style>
+    </head>
+    <body>
+        <p>background-attachment: fixed</p>
+        <div class="container" id="fixed">
+            <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, tenetur aspernatur.
+                Corrupti reiciendis unde, saepe magnam eligendi inventore temporibus voluptatum
+                sequi provident impedit? Veritatis quibusdam totam nihil consequuntur, libero
+                molestias? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, tenetur
+                aspernatur. Corrupti reiciendis unde, saepe magnam eligendi inventore temporibus
+                voluptatum sequi provident impedit? Veritatis quibusdam totam nihil consequuntur,
+                libero molestias? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel,
+                tenetur aspernatur. Corrupti reiciendis unde, saepe magnam eligendi inventore
+                temporibus voluptatum sequi provident impedit? Veritatis quibusdam totam nihil
+                consequuntur, libero molestias?
+            </p>
+        </div>
+
+        <p>background-attachment: scroll</p>
+        <div class="container" id="scroll">
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem dignissimos cumque
+                ipsum neque pariatur similique necessitatibus vero officia voluptatum nostrum
+                numquam enim facilis eum dicta, eveniet fugiat a reiciendis dolores. Lorem, ipsum
+                dolor sit amet consectetur adipisicing elit. Vel, tenetur aspernatur. Corrupti
+                reiciendis unde, saepe magnam eligendi inventore temporibus voluptatum sequi
+                provident impedit? Veritatis quibusdam totam nihil consequuntur, libero molestias?
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, tenetur aspernatur.
+                Corrupti reiciendis unde, saepe magnam eligendi inventore temporibus voluptatum
+                sequi provident impedit? Veritatis quibusdam totam nihil consequuntur, libero
+                molestias?
+            </p>
+        </div>
+
+        <p>background-attachment: local</p>
+        <div class="container" id="local">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores optio quae,
+                perspiciatis beatae sunt voluptatibus perferendis veritatis quaerat, ipsum
+                consequatur delectus consequuntur iusto tenetur? Mollitia et quia deserunt nisi
+                dolor. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel, tenetur
+                aspernatur. Corrupti reiciendis unde, saepe magnam eligendi inventore temporibus
+                voluptatum sequi provident impedit? Veritatis quibusdam totam nihil consequuntur,
+                libero molestias? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vel,
+                tenetur aspernatur. Corrupti reiciendis unde, saepe magnam eligendi inventore
+                temporibus voluptatum sequi provident impedit? Veritatis quibusdam totam nihil
+                consequuntur, libero molestias?
+            </p>
+        </div>
+    </body>
+</html>

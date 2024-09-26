@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fundo de Elementos</title>
+        <style>
+            .container {
+                width: 300px;
+                height: 300px;
+                background-image: url(image/image1.jpg); /* Aplica uma imagem de fundo ao elemento */
+                background-size: 100% 100%; /* Ajusta o tamanho da imagem de fundo para cobrir todo o container */
+                background-repeat: no-repeat; /* Impede que a imagem de fundo se repita */
+                border: 1px solid black; /* Adiciona uma borda preta ao redor do container */
+                border: 15px dashed palegreen; /* Adiciona uma borda tracejada verde claro ao redor do container */
+                padding: 30px; /* Adiciona um espaçamento interno de 30px ao redor do conteúdo do container */
+            }
+
+                /* Explicação sobre os diferentes valores de background-origin */
+
+                /* 
+                background-origin: padding-box;
+                - Este valor define que a imagem de fundo começará a partir do limite da caixa de padding.
+                - Ou seja, a imagem de fundo não será desenhada atrás da borda, mas sim a partir do limite interno do padding.
+                - A imagem de fundo preencherá a área da borda e do conteúdo, mas a origem do background será o padding.
+                */
+                #padding-box {
+                    background-origin: padding-box;
+                }
+
+                /* 
+                background-origin: border-box;
+                - Este valor faz com que a origem do fundo comece no limite externo da borda do elemento.
+                - Isso significa que a imagem de fundo será desenhada desde o limite mais externo da borda até o conteúdo.
+                - Útil quando você deseja que o fundo cubra também a área da borda.
+                */
+                #border-box {
+                    background-origin: border-box;
+                }
+
+                /* 
+                background-origin: content-box;
+                - Com esse valor, a origem da imagem de fundo será a caixa de conteúdo, ignorando o padding e a borda.
+                - A imagem de fundo será desenhada apenas dentro da área do conteúdo, sem se estender para o padding ou a borda.
+                - Este valor é usado quando você deseja que a imagem cubra apenas a área de conteúdo.
+                */
+                #content-box {
+                    background-origin: content-box;
+                }
+
+
+        </style>
+    </head>
+    <body>
+        <p>background-origin: padding-box</p>
+        <div class="container" id="padding-box"></div>
+            
+        </div>
+
+        <p>background-origin: border-box</p>
+        <div class="container" id="border-box"></div>
+            
+        </div>
+
+        <p>background-origin: content-box</p>
+        <div class="container" id="content-box"></div>
+            
+        </div>
+        
+    </body>
+</html>
